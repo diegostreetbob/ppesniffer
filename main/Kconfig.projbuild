@@ -1,0 +1,30 @@
+menu "WIFI CONNECT"
+
+    config WIFI_SSID
+        string "SSID"
+        default "your default ssid"
+    
+    config WIFI_PASSWORD
+        string "PASSWORD"
+        default "sour default pass"  
+    
+endmenu
+menu "MQTT CONNECT"
+
+    config BROKER_URL
+        string "Broker URL"
+        default "mqtts://your domain.com"
+        help
+            URL of the broker to connect to
+
+    config CLIENT_ID
+        string "client id"
+        default "please change client id"
+        help
+            client identification
+
+    config BROKER_URL_FROM_STDIN
+        bool
+        default y if BROKER_URL = "FROM_STDIN"
+
+endmenu
